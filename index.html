@@ -9,7 +9,31 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="J. Alejandro Martínez — Content Strategy">
 <meta property="og:description" content="Newsletters, lifecycle email, healthcare social media and short-form video. Case studies with the numbers attached.">
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://mundacio.github.io/">
+<meta property="og:site_name" content="J. Alejandro Martínez">
+<meta property="og:image" content="https://mundacio.github.io/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="J. Alejandro Martínez — content strategy, with 5,000 subscribers, 39% open rate and 8 healthcare accounts.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mundacio.github.io/assets/og-card.jpg">
+<link rel="canonical" href="https://mundacio.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "J. Alejandro Martínez",
+  "alternateName": "Mundacio",
+  "jobTitle": "Content Strategist",
+  "url": "https://mundacio.github.io/",
+  "image": "https://mundacio.github.io/assets/og-card.jpg",
+  "address": {"@type": "PostalAddress", "addressLocality": "Caracas", "addressCountry": "VE"},
+  "email": "mailto:mundacio@outlook.com",
+  "sameAs": ["https://linkedin.com/in/mundacio"],
+  "knowsAbout": ["Content strategy", "Newsletters", "Lifecycle email", "Social media", "Short-form video"],
+  "worksFor": {"@type": "Organization", "name": "SBC Performance"}
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23f6efe3'/><text x='50' y='72' font-size='62' font-family='Georgia,serif' text-anchor='middle' fill='%237b2233'>A</text></svg>">
 <style>
   :root{
@@ -60,7 +84,7 @@
   .role{font-size:1.02rem;color:var(--muted);margin:0 0 1.8rem}
   .lede{font-size:1.14rem;line-height:1.6;max-width:62ch}
 
-  .index{list-style:none;padding:0;margin:2.2rem 0 0;border-top:1px solid var(--rule)}
+  .index{list-style:none;padding:0;margin:2.2rem 0 0;border-top:1px solid var(--rule);scroll-margin-top:4.6rem}
   .index li{border-bottom:1px solid var(--rule)}
   .index a{
     display:grid;grid-template-columns:11.5rem 1fr auto;gap:.15rem 1.4rem;align-items:baseline;
@@ -150,6 +174,18 @@
   }
   .totop:hover{background:var(--wine);color:var(--paper);border-color:var(--wine)}
 
+  /* movimiento: una sola vez, 12 px, y se apaga si el sistema pide menos animación */
+  .js .rise{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
+  .js .rise.in{opacity:1;transform:none}
+  figure.shot{overflow:hidden}
+  figure.shot img{transition:transform .5s ease}
+  figure.shot:hover img{transform:scale(1.02)}
+  @media (prefers-reduced-motion:reduce){
+    .js .rise{opacity:1;transform:none;transition:none}
+    figure.shot img{transition:none}
+    figure.shot:hover img{transform:none}
+  }
+
   @page{size:A4;margin:14mm}
   @media print{
     :root{--paper:#fff;--paper-2:#f4f4f4;--ink:#111;--muted:#5f5f5f;--rule:#ccc;--wine:#111}
@@ -166,6 +202,7 @@
     .quote{break-inside:avoid;padding:.7rem 0 .7rem .8rem}
     .quote img{width:3.2rem;height:3.2rem}
     .back{display:none}
+    .js .rise{opacity:1!important;transform:none!important;transition:none!important}
     .close{background:#fff;color:#111;border-top:1px solid #ccc}
     .close h2,.close a{color:#111}
     .close a{border-bottom:1px solid #111}
@@ -180,7 +217,7 @@
   <div class="inner">
     <a class="who" href="#top">J. Alejandro Martínez</a>
     <div class="links">
-      <a href="#work">Work</a>
+      <a href="#index">Work</a>
       <a href="#about">About</a>
       <a href="#testimonials" class="opt">References</a>
       <a href="#contact">Contact</a>
@@ -199,7 +236,7 @@
     thing running when there is one person and eight accounts.
   </p>
 
-  <ul class="index">
+  <ul class="index" id="index">
     <li style="--c:#1c5f57;--c-soft:#e3ecea"><a href="#finbi"><span class="co">FINBI</span><span class="what">Weekly financial newsletter, launched from zero</span><span class="val">0 → 5,000 subscribers · open rate 24% → 39%</span><span class="arrow">↗</span></a></li>
     <li style="--c:#23407a;--c-soft:#e4e8f2"><a href="#valu-email"><span class="co">VAL-U</span><span class="what">Two-stage email activation across 30+ schools</span><span class="val">Open rate 28% → 35% · module completion +17%</span><span class="arrow">↗</span></a></li>
     <li style="--c:#7b2233;--c-soft:#f2e5e6"><a href="#sbc"><span class="co">SBC Performance</span><span class="what">Eight healthcare accounts on one editorial system</span><span class="val">8 accounts · 24+ assets a week</span><span class="arrow">↗</span></a></li>
@@ -219,7 +256,7 @@
     <p><b>The problem.</b> FINBI needed a financial newsletter that explained complex topics in plain language and tied every issue back to a course.</p>
     <p><b>What I did.</b> I benchmarked Morning Brew, Bloomberg and the FT to take the mechanics worth copying, simplified the concepts into practical tips and kept the tone light and accessible. Then I tested subject lines and calls to action against real reader response. Each issue closed on a course, so the list produced qualified leads.</p>
     <p><b>Result.</b> Zero to <b>5,000 subscribers</b>, average open rate from <b>24% to 39%</b> and a <b>6.9% click-to-open rate</b>. I also framed the content and the programme for FINBI's first in-person community event.</p>
-    <p class="back"><a href="#work">↑ Back to the index</a></p>
+    <p class="back"><a href="#index">↑ Back to the index</a></p>
   </article>
 
   <article class="case" id="valu-email" style="--c:#23407a;--c-soft:#e4e8f2">
@@ -230,7 +267,7 @@
     <p><b>The problem.</b> Generic messaging gave students no reason to keep going, so drop-off piled up in the first weeks of the programme, across 30+ schools in Mexico and Venezuela.</p>
     <p><b>What I did.</b> A two-stage strategy: an onboarding sequence that set expectations, then segmented, behaviour-based content for students falling behind on lessons. I segmented with Mailchimp reporting and student-progression data, rewrote subject lines and message framing, and built it as a framework so the same logic held across a large international base.</p>
     <p><b>Result.</b> Open rate from <b>28% to 35%</b>, click-to-open at <b>9%</b> and module completion up <b>17%</b>. I also scripted and directed two financial-education modules used by <b>1,000+ students</b>, which supported around 100 enrolments through school sales conversations.</p>
-    <p class="back"><a href="#work">↑ Back to the index</a></p>
+    <p class="back"><a href="#index">↑ Back to the index</a></p>
   </article>
 
   <article class="case" id="sbc" style="--c:#7b2233;--c-soft:#f2e5e6">
@@ -251,7 +288,7 @@
         <figcaption>Consultorio Tarabini — the carousel that tested the same hypothesis: 21 likes against an average of 6.</figcaption>
       </figure>
     </div>
-    <p class="back"><a href="#work">↑ Back to the index</a></p>
+    <p class="back"><a href="#index">↑ Back to the index</a></p>
   </article>
 
   <article class="case" id="valu-reel" style="--c:#23407a;--c-soft:#e4e8f2">
@@ -266,7 +303,7 @@
       <img src="assets/caso-valu-reel.jpg" width="800" height="633" loading="lazy" alt="Instagram post by myval_u in collaboration with Colegio Francia: students answering what they would invest in">
       <figcaption>The published reel on @myval_u, in collaboration with Colegio Francia: two students answering what they would invest in, and what they would not.</figcaption>
     </figure>
-    <p class="back"><a href="#work">↑ Back to the index</a></p>
+    <p class="back"><a href="#index">↑ Back to the index</a></p>
   </article>
 
   <article class="case" id="sunny" style="--c:#53305f;--c-soft:#ece4ef">
@@ -278,7 +315,7 @@
     <p><b>What I did.</b> I measured the category instead of trusting the brief: 707 competitor Reels across three accounts, 53 outliers downloaded and coded frame by frame against the first three seconds, and the brand's own 12 Reels coded with the same rubric. Then I read 38,782 site sessions and the email and CRM setup behind the account.</p>
     <p><b>What I found.</b> The brand states the money in the first second but films a salon and a face. The accounts doing millions cut to <b>scalp, hands and comb</b> and answer the price objection head-on; the leading account shows no face in <b>24 of 24 outliers</b>.</p>
     <p><b>What I delivered.</b> The audit and the go-forward plan: pillars, first-three-second rules, hook and objection frameworks, and the publishing route.</p>
-    <p class="back"><a href="#work">↑ Back to the index</a></p>
+    <p class="back"><a href="#index">↑ Back to the index</a></p>
   </article>
 </section>
 
@@ -363,6 +400,21 @@ document.getElementById('pdf').addEventListener('click', function(e){
   e.preventDefault();
   window.print();
 });
+
+// Aparición al entrar en pantalla. Si el sistema pide menos movimiento, no se activa nada
+// y el contenido queda visible desde el primer instante.
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var items = document.querySelectorAll('article.case, .quote, figure.shot');
+  if (!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:.05});
+  items.forEach(function(el){ el.classList.add('rise'); io.observe(el); });
+})();
 </script>
 </body>
 </html>
