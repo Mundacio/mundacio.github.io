@@ -122,6 +122,18 @@
   .case h3 em{font-style:italic;color:var(--c)}
   .meta{font-size:.92rem;color:var(--muted);margin:0 0 .6rem}
   .figures{font-size:.95rem;margin:0 0 1.4rem;padding-left:.9rem;border-left:3px solid var(--c)}
+  .stat{display:flex;align-items:baseline;gap:.9rem;margin:.1rem 0 1.2rem}
+  .stat b{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4.6vw,2.5rem);line-height:1;color:var(--c);letter-spacing:-.02em}
+  .stat span{font-size:.91rem;color:var(--muted);max-width:36ch;line-height:1.4}
+  .rows{margin:0 0 1.2rem}
+  .row{display:grid;grid-template-columns:7rem 1fr;gap:0 1.4rem;padding:.85rem 0;border-top:1px solid var(--rule)}
+  .row:first-child{border-top:0;padding-top:0}
+  .lab{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--c);margin:0;line-height:1.5}
+  .row .txt{margin:0}
+  @media(max-width:640px){
+    .row{grid-template-columns:1fr;gap:.1rem;padding:.75rem 0}
+    .lab{font-size:.95rem}
+  }
   .back{margin:1.6rem 0 0;font-size:.92rem}
   .back a{color:var(--muted)}
   .back a:hover{color:var(--c)}
@@ -197,6 +209,11 @@
     article.case:target{background:none}
     h1{font-size:24pt}h2{font-size:15pt;margin-bottom:.9rem}h3{font-size:12.5pt}
     .index a{padding:.3rem 0}
+    .row{display:block;padding:.4rem 0;border-top:1px solid #ddd;break-inside:avoid;page-break-inside:avoid}
+    .row:first-child{padding-top:0}
+    .lab{display:block;font-size:9.5pt;margin:0 0 .05rem}
+    .stat{margin-bottom:.6rem}
+    .stat b{font-size:20pt}
     figure.shot{background:none;padding:0;border:0}
     figure.shot img{max-height:78mm;width:auto;max-width:100%}
     .quote{break-inside:avoid;padding:.7rem 0 .7rem .8rem}
@@ -252,10 +269,13 @@
     <p class="num">01</p>
     <h3>Launching a weekly financial newsletter <em>from nothing</em></h3>
     <p class="meta">FINBI — newsletter &amp; content strategist · Financial education · Remote · Jan 2022 – Jan 2023</p>
-    <p class="figures">0 → 5,000 subscribers · open rate 24% → 39% · 6.9% click-to-open</p>
-    <p><b>The problem.</b> FINBI needed a financial newsletter that explained complex topics in plain language and tied every issue back to a course.</p>
-    <p><b>What I did.</b> I benchmarked Morning Brew, Bloomberg and the FT to take the mechanics worth copying, simplified the concepts into practical tips and kept the tone light and accessible. Then I tested subject lines and calls to action against real reader response. Each issue closed on a course, so the list produced qualified leads.</p>
-    <p><b>Result.</b> Zero to <b>5,000 subscribers</b>, average open rate from <b>24% to 39%</b> and a <b>6.9% click-to-open rate</b>. I also framed the content and the programme for FINBI's first in-person community event.</p>
+    <div class="stat"><b>5,000</b><span>subscribers, from zero in twelve months</span></div>
+    <p class="figures">Open rate 24% → 39% · 6.9% click-to-open</p>
+    <div class="rows">
+      <div class="row"><p class="lab">The problem</p><p class="txt">FINBI needed a weekly newsletter that explained complex financial topics in plain language and pointed each issue back to a course.</p></div>
+      <div class="row"><p class="lab">What I did</p><p class="txt">I benchmarked Morning Brew, Bloomberg and the FT for the mechanics worth copying, then simplified the concepts into practical tips and kept the tone light. Subject lines and calls to action were tested against real reader response, not opinion.</p></div>
+      <div class="row"><p class="lab">Result</p><p class="txt">Open rate from 24% to 39% at a 6.9% click-to-open, with every issue closing on a course so the list produced qualified leads. I also framed the content and the programme for FINBI's first in-person community event.</p></div>
+    </div>
     <p class="back"><a href="#index">↑ Back to the index</a></p>
   </article>
 
@@ -263,10 +283,13 @@
     <p class="num">02</p>
     <h3>A two-stage activation strategy for <em>5,000 students</em></h3>
     <p class="meta">VAL-U — content &amp; lifecycle marketing strategist · Financial education · Remote · Jun 2023 – Feb 2024</p>
-    <p class="figures">Open rate 28% → 35% · 9% click-to-open · module completion +17%</p>
-    <p><b>The problem.</b> Generic messaging gave students no reason to keep going, so drop-off piled up in the first weeks of the programme, across 30+ schools in Mexico and Venezuela.</p>
-    <p><b>What I did.</b> A two-stage strategy: an onboarding sequence that set expectations, then segmented, behaviour-based content for students falling behind on lessons. I segmented with Mailchimp reporting and student-progression data, rewrote subject lines and message framing, and built it as a framework so the same logic held across a large international base.</p>
-    <p><b>Result.</b> Open rate from <b>28% to 35%</b>, click-to-open at <b>9%</b> and module completion up <b>17%</b>. I also scripted and directed two financial-education modules used by <b>1,000+ students</b>, which supported around 100 enrolments through school sales conversations.</p>
+    <div class="stat"><b>+17%</b><span>module completion, after the drop-off point</span></div>
+    <p class="figures">Open rate 28% → 35% · 9% click-to-open</p>
+    <div class="rows">
+      <div class="row"><p class="lab">The problem</p><p class="txt">Generic messaging gave students no reason to keep going, so drop-off piled up in the first weeks of the programme, across 30+ schools in Mexico and Venezuela.</p></div>
+      <div class="row"><p class="lab">What I did</p><p class="txt">A two-stage strategy: an onboarding sequence that set expectations, then segmented, behaviour-based content for students falling behind on lessons. Segmentation came from Mailchimp reporting and student-progression data; the logic was built as a framework so it held across a large international base.</p></div>
+      <div class="row"><p class="lab">Result</p><p class="txt">Open rate from 28% to 35% at 9% click-to-open. I also scripted and directed two financial-education modules used by 1,000+ students, which supported around 100 enrolments through school sales conversations.</p></div>
+    </div>
     <p class="back"><a href="#index">↑ Back to the index</a></p>
   </article>
 
@@ -275,9 +298,11 @@
     <h3>Eight healthcare accounts, <em>one editorial system</em></h3>
     <p class="meta">SBC Performance — community manager · Healthcare marketing · Remote · Jan 2026 – Jul 2026</p>
     <p class="figures">8 concurrent accounts · 24+ weekly assets · carousel test 21 likes against an account average of 6</p>
-    <p><b>The problem.</b> Eight healthcare accounts needed consistent engagement and visibility without losing a professional, trustworthy voice, and one producer had to keep them all publishing without gaps.</p>
-    <p><b>What I did.</b> I owned content strategy for all eight: pillars, editorial calendars, weekly plans. Then ran end-to-end production of 24+ weekly assets plus SEO blog content, briefing design and leadership. Calendars, approvals, briefs and publishing lived in Notion, Slack and Meta Business Suite. Past performance decided the format: doctor-led, problem-based content earned priority because it resonated more with patients.</p>
-    <p><b>Result.</b> A repeatable workflow that kept planning, approval, design and publishing aligned across eight clients. A doctor-led reel on last-minute cancellations reached <b>66 likes and 7 comments</b>; a carousel built to test the same hypothesis beat the account's usual average of 6 likes with <b>21</b>; a patient-testimonial reel for Dentalia reached <b>63 likes and 7 comments</b> by structuring the story around the patient's outcome rather than a sales pitch.</p>
+    <div class="rows">
+      <div class="row"><p class="lab">The problem</p><p class="txt">Eight healthcare accounts needed consistent engagement and visibility without losing a professional, trustworthy voice — and one producer had to keep them all publishing without gaps.</p></div>
+      <div class="row"><p class="lab">What I did</p><p class="txt">I owned content strategy for all eight: pillars, editorial calendars, weekly plans, then end-to-end production of 24+ weekly assets plus SEO blog content, briefing design and leadership. Calendars, approvals and briefs lived in Notion, Slack and Meta Business Suite. Past performance set the format: doctor-led, problem-based content earned priority because patients responded to it.</p></div>
+      <div class="row"><p class="lab">Result</p><p class="txt">A repeatable workflow that kept planning, approval, design and publishing aligned across eight clients. A doctor-led reel on last-minute cancellations reached 66 likes and 7 comments; a carousel built to test the same hypothesis beat the account's usual average of 6 likes with 21; a patient-testimonial reel for Dentalia reached 63 likes and 7 comments by structuring the story around the patient's outcome rather than a sales pitch.</p></div>
+    </div>
     <div class="shots">
       <figure class="shot">
         <img src="assets/caso-dentalia.jpg" width="800" height="641" loading="lazy" alt="Instagram post by dentalia.ve: patient testimonial reel with 63 likes">
@@ -296,9 +321,11 @@
     <h3>A classroom activity turned into a <em>parent-facing reel</em></h3>
     <p class="meta">VAL-U — content creator &amp; scriptwriter · Financial education · Remote · Jun 2023 – Feb 2024</p>
     <p class="figures">120 likes · 7 comments · published 20 May 2025 with Colegio Francia</p>
-    <p><b>The problem.</b> Financial education had to feel tangible, relevant and credible to parents, not only informative to students.</p>
-    <p><b>What I did.</b> I picked a real classroom moment: students explaining which company they would invest in and why. The hook, script and narrative structure were built around practical decision-making instead of abstract finance concepts. I prepared the student responses, directed the storytelling and worked with design on the final edit.</p>
-    <p><b>Result.</b> VAL-U's value proposition became visible instead of claimed: <b>120 likes and 7 comments</b> out of a real investment scenario, led from concept to final cut.</p>
+    <div class="rows">
+      <div class="row"><p class="lab">The problem</p><p class="txt">Financial education had to feel tangible, relevant and credible to parents, not only informative to students.</p></div>
+      <div class="row"><p class="lab">What I did</p><p class="txt">I took a real classroom moment — students explaining which company they would invest in and why — and built the hook, script and narrative around practical decision-making instead of abstract finance. I prepared the student responses, directed the storytelling and worked with design on the final edit.</p></div>
+      <div class="row"><p class="lab">Result</p><p class="txt">VAL-U's value proposition became visible instead of claimed: 120 likes and 7 comments out of a real investment scenario, led from concept to final cut.</p></div>
+    </div>
     <figure class="shot">
       <img src="assets/caso-valu-reel.jpg" width="800" height="633" loading="lazy" alt="Instagram post by myval_u in collaboration with Colegio Francia: students answering what they would invest in">
       <figcaption>The published reel on @myval_u, in collaboration with Colegio Francia: two students answering what they would invest in, and what they would not.</figcaption>
@@ -310,12 +337,15 @@
     <p class="num">05</p>
     <h3>Why competitors reach <em>a thousand times further</em></h3>
     <p class="meta">Sunny Braids — content strategy consultant (contract) · Braiding and hair education · San Juan, PR · Nov 2026</p>
-    <p class="figures">707 public Reels measured · 53 outliers coded frame by frame · 14-day engagement</p>
-    <p><b>The problem.</b> The brief asked how to improve the hooks on a daily posting schedule. The larger question was why rival accounts selling the same braiding course reach a thousand times the audience, in a category where everyone has the same product, the same city and the same customers.</p>
-    <p><b>What I did.</b> I treated the category as the dataset, because every Reel in it is public. 707 Reels across three competitor accounts, their outlier distribution mapped, and 53 statistical outliers — videos performing at 2× or more over their own account average — downloaded and coded frame by frame against the first three seconds: what appears, in what order, what is said, what is priced.</p>
-    <p><b>What I found.</b> Reach in this category is not a production problem, it is a framing problem. The accounts that travel cut to <b>scalp, hands and comb</b> inside the opening second and answer the price objection on camera; the one that reaches furthest shows no face at all in <b>24 of its 24 outliers</b>. The market also does not look for braiding, it looks for a map: discovery happens on Maps, and the booking closes off-platform, in GlossGenius, Booksy or WooCommerce.</p>
-    <p><b>What I delivered.</b> A competitive audit and the go-forward plan: content pillars, first-three-second rules, hook and objection frameworks, and a publishing route the team could run without me. The engagement ran two weeks and execution stayed with the client, so this case stops honestly at the diagnosis.</p>
-    <p><b>Not shown.</b> Session data, CRM figures and the client's own performance numbers are covered by a confidentiality agreement. Everything published here is public Reel data and the method used to read it.</p>
+    <div class="stat"><b>707</b><span>public Reels measured across three competitor accounts</span></div>
+    <p class="figures">53 outliers coded frame by frame · 14-day engagement window</p>
+    <div class="rows">
+      <div class="row"><p class="lab">The problem</p><p class="txt">The brief asked how to improve the hooks on a daily posting schedule. The larger question was why rival accounts selling the same braiding course reach a thousand times the audience, in a category where everyone has the same product, the same city and the same customers.</p></div>
+      <div class="row"><p class="lab">What I did</p><p class="txt">I treated the category as the dataset, because every Reel in it is public: 707 Reels across three competitor accounts, their outlier distribution mapped. Then the 53 videos performing at 2× or more over their own account average were coded frame by frame against the first three seconds — what appears, in what order, what is said, what is priced.</p></div>
+      <div class="row"><p class="lab">What I found</p><p class="txt">Reach in this category is not a production problem, it is a framing problem. The accounts that travel cut to scalp, hands and comb inside the opening second and answer the price objection on camera; the one that reaches furthest shows no face at all in 24 of its 24 outliers. The market also does not look for braiding, it looks for a map: discovery happens on Maps, and the booking closes off-platform, in GlossGenius, Booksy or WooCommerce.</p></div>
+      <div class="row"><p class="lab">What I delivered</p><p class="txt">A competitive audit and the go-forward plan: content pillars, first-three-second rules, hook and objection frameworks, and a publishing route the team could run without me. The engagement ran two weeks and execution stayed with the client, so this case stops honestly at the diagnosis.</p></div>
+      <div class="row"><p class="lab">Not shown</p><p class="txt">Session data, CRM figures and the client's own performance numbers are covered by a confidentiality agreement. Everything published here is public Reel data and the method used to read it.</p></div>
+    </div>
     <p class="back"><a href="#index">↑ Back to the index</a></p>
   </article>
 </section>
